@@ -5,10 +5,11 @@ body {
 .accodion {
   /* margin: 100px auto; */
   background-color: rgb(206, 194, 194);
-  width: 500;
+  width: 800px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 54px;
+  margin-left: 250px;
 }
 .icon {
   width: 24px;
@@ -19,16 +20,20 @@ body {
 .text,
 .number {
   font-weight: 500;
-  color: #087f5b;
+  color: #000;
   font-size: 24px;
   border: #22ca22;
+  margin-left: 10px;
+}
+.number {
+  color: #635e5e;
 }
 .hidden p {
   line-height: 1.8;
   margin-bottom: 5px;
 }
 .hidden ul {
-  color: #6a726f;
+  color: #221e1e;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
@@ -43,15 +48,16 @@ body {
   display: grid;
   grid-template-columns: auto 1fr auto;
   box-shadow: 0 0 32 rgb(0, 0, 0.1);
-  padding-bottom: 24px;
+  /* padding-bottom: 24px; */
   column-gap: 24px;
+  margin-bottom: 20px;
 }
-.hidden {
-  grid-column: 2;
-}
+
 .item1 {
+  margin-bottom: 20px;
+
   display: grid;
-  background-color: rgb(194, 105, 105);
+  background-color: rgb(197, 196, 196);
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
 }
@@ -77,7 +83,7 @@ body {
   stroke: #087f5b;
   grid-column: 3;
 }
-
+/* 
 .hidden p {
   line-height: 1.8;
   margin-bottom: 5px;
@@ -92,7 +98,7 @@ body {
 
 .hidden li {
   margin-left: 10px;
-}
+} */
 .items {
   /* background-color: #087f5b; */
   display: grid;
@@ -102,4 +108,16 @@ body {
 }
 .hidden {
   grid-column: 2;
+  display: none;
+}
+.open {
+  border-top: 5px solid green;
+}
+.open .hidden {
+  display: block;
+}
+
+.open .number,
+.open .text {
+  color: #087f5b;
 }
